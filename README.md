@@ -1,0 +1,2 @@
+# qocayeftagger
+İcazəsiz əkmə oğul(::
