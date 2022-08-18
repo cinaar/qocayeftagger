@@ -689,7 +689,7 @@ async def mentionall(tagadmin):
 		sleep(0.5)
   
   
-  @client.on(events.NewMessage(pattern="^/repo$"))
+@client.on(events.NewMessage(pattern="^/sahib ?(.*)"))
 async def info(event):
   await event.reply("**Merhaba Benim Ve Sahibim Hakkında Bilgi\n\nPython: 3.8.2\nKütüphanem: Telethon\n\nSahibim: @MacroPem Gruplarınızda Üyeleri Etiketlemek için Yaratılmışım**",
                     buttons=(
