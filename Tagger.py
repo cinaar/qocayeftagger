@@ -56,7 +56,6 @@ async def help(event):
                       ],
                     ),
                     link_preview=False)
-                   )
 	
 @client.on(events.NewMessage(pattern="^/qurup$"))
 async def help(event):
