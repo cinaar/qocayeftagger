@@ -44,13 +44,18 @@ async def help(event):
   helptext = "@SumqayitTaggerBot Komandaları 🤖\n\n/stag - Şehid adları ıle tag eder\n/cancel - botu dayandırar\n/tag <səbəb> - 5-li tag edər\n/etag <səbəb> - Emoji ilə tag edərr\n/mtag <səbəb> - mafia rolları ilə tag edər\n/tektag <səbəb> - İstifadəçiləri tək tək tag edər\n/admins <səbəb> - Yönəticiləri tək tək tag edər\n/btag <səbəb> - Bayrağla tag edər\n/ftag <səbəb> - Futbolçu adları ilə tag edər\n/fdtag <səbəb> federasiya adları ilə tağ edər\n/rtag <səbəb> - Fərgli Rənglərlə tağ edər"
   await event.reply(helptext,
                     buttons=(
-                        [Button.url('✨️ Məni Qurupa əlavə et ✨️', 'http://t.me/SumqayitTaggerBot?startgroup=a')],
-                      [Button.url('Support 🐊', 'https://t.me/sumqayitchattt')],
-                      [Button.url('Rəsmi Kanal 🔖', 'https://t.me/CreativBlog')],
-                      [Button.url('Məkanımız 🔖', 'https://t.me/sumqayitchattt')],
-		      [Button.url('Owner ❤️‍🔥', 'https://t.me/Rexxuxxnxx')]
+                      [
+                       Button.url('Sahibim', 'https://t.me/Rexxuxxnxx')
+                      ],
+                      [
+                       Button.url('Beni Grubuna Ekle', 'https://t.me/Creativmscbot?startgroup=a'),
+                       Button.url('Kanal', 'https://t.me/QocayefMenuX')
+                      ],
+                      [
+                       Button.url('Sahibim', 'https://t.me/Rexxuxxnxx')
+                      ],
                     ),
-                    link_preview=False
+                    link_preview=False)
                    )
 	
 @client.on(events.NewMessage(pattern="^/qurup$"))
