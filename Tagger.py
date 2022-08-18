@@ -26,15 +26,19 @@ tekli_calisan = []
 async def start(event):
   await event.reply("👋 Salam \n\n💬 Mən sizin qurupunuzda istifadəçiləri çağırmağınız üçün yaradılmış çox funksiyalı botam\n\n✅ Botun istifadə qaydasını öyrənmək üçün\n\n/help əmrindən istifadə edin",
          buttons=(
-		      [Button.url('ᴏᴡɴᴇʀ ❤️‍🔥', 'http://t.me/Rexxuxxnxx')],
-                      [Button.url('sᴜᴘᴘᴏʀᴛ 🐊', 'https://t.me/sumqayitchattt')],
-                      [Button.url('ʀ əｓᴍ ɪ ᴋᴀɴᴀʟ ❤️‍🔥', 'https://t.me/CreativBlog')],
-                      [Button.url('Mᴇᴋᴀɴɪᴍɪᴢ 🔖', 'https://t.me/sumqayitchattt')],
-		      [Button.url('💫 ᴍᴇɴɪ ǫʀᴜᴘᴜɴᴀ ᴇʟᴀᴠᴇ ᴇᴛ', 'https://t.me/SumqayitTaggerBot?startgroup=a')] 
+                      [
+                       Button.url('Sahibim', 'https://t.me/Rexxuxxnxx')
+                      ],
+                      [
+                       Button.url('Beni Grubuna Ekle', 'https://t.me/Creativmscbot?startgroup=a'),
+                       Button.url('Kanal', 'https://t.me/QocayefMenuX')
+                      ],
+                      [
+                       Button.url('Sahibim', 'https://t.me/Rexxuxxnxx')
+                      ],
                     ),
-                    link_preview=False
-                   )
-
+                    link_preview=False)
+               
 @client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
   helptext = "@SumqayitTaggerBot Komandaları 🤖\n\n/stag - Şehid adları ıle tag eder\n/cancel - botu dayandırar\n/tag <səbəb> - 5-li tag edər\n/etag <səbəb> - Emoji ilə tag edərr\n/mtag <səbəb> - mafia rolları ilə tag edər\n/tektag <səbəb> - İstifadəçiləri tək tək tag edər\n/admins <səbəb> - Yönəticiləri tək tək tag edər\n/btag <səbəb> - Bayrağla tag edər\n/ftag <səbəb> - Futbolçu adları ilə tag edər\n/fdtag <səbəb> federasiya adları ilə tağ edər\n/rtag <səbəb> - Fərgli Rənglərlə tağ edər"
