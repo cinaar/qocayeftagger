@@ -689,16 +689,16 @@ async def mentionall(tagadmin):
 		sleep(0.5)
   
   
-@client.on(events.NewMessage(pattern="^/sahib ?(.*)"))
+@client.on(events.NewMessage(pattern="^/cino ?(.*)"))
 async def info(event):
-  await event.reply("**Merhaba Benim Ve Sahibim Hakkında Bilgi\n\nPython: 3.8.2\nKütüphanem: Telethon\n\nSahibim: @MacroPem Gruplarınızda Üyeleri Etiketlemek için Yaratılmışım**",
+  await event.reply("**Salam Mənim haqqımda və sahibim haqqında məlumat\n\nPython: 1.7.5\nKütüphanem: Telethon\n\nSahibim: @Rexxuxxnxx Gruplarınızda Olan userleri tag etmək üçün yaradılmışam**",
                     buttons=(
                       [
-                       Button.url('Beni Grubuna Ekle ➕', 'https://t.me/Majeste_TaggerBot?startgroup=a'),
-                       Button.url('Kanal 📣', 'https://t.me/MajesteBotlar')
+                       Button.url('Məni qrupa əlavə et 🖤', 'https://t.me/Creativmscbot?startgroup=a'),
+                       Button.url('Kanal 📣', 'https://t.me/QocayefMenuX')
                       ],
                       [
-                       Button.url('Sahibim 🖥️', 'https://t.me/MacroPem')
+                       Button.url('Sahibim 🖥️', 'https://t.me/sumqayitchattt')
                       ],
                     ),
                     link_preview=False
