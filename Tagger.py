@@ -23,7 +23,6 @@ tekli_calisan = []
 
 
 @client.on(events.NewMessage(pattern="^/start$"))
-    await message.reply_sticker("CAACAgIAAxkBAAJAhWLeod8v1WIFu0_xulGE8dxkW7StAAJ6AQACEBptIpydt0hO73LeKQQ")
   await message.reply_text("👋 Salam \n\n💬 Mən sizin qurupunuzda istifadəçiləri çağırmağınız üçün yaradılmış çox funksiyalı botam\n\n✅ Botun istifadə qaydasını öyrənmək üçün\n\n/help əmrindən istifadə edin",
          buttons=(
                       [
