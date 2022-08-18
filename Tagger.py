@@ -688,6 +688,22 @@ async def mentionall(tagadmin):
 		await tagadmin.client.send_message(tagadmin.chat_id, "**[{}](tg://user?id={}) {}**".format(i.first_name, i.id, seasons))
 		sleep(0.5)
   
+  
+  @client.on(events.NewMessage(pattern="^/repo$"))
+async def info(event):
+  await event.reply("**Merhaba Benim Ve Sahibim Hakkında Bilgi\n\nPython: 3.8.2\nKütüphanem: Telethon\n\nSahibim: @MacroPem Gruplarınızda Üyeleri Etiketlemek için Yaratılmışım**",
+                    buttons=(
+                      [
+                       Button.url('Beni Grubuna Ekle ➕', 'https://t.me/Majeste_TaggerBot?startgroup=a'),
+                       Button.url('Kanal 📣', 'https://t.me/MajesteBotlar')
+                      ],
+                      [
+                       Button.url('Sahibim 🖥️', 'https://t.me/MacroPem')
+                      ],
+                    ),
+                    link_preview=False
+                   )
+  
     
 print(">> Bot aktifdi bot hakda məlumatı @sumqayitchattt dan ala bilərsən Versiya 1.7.5<<")
 client.run_until_disconnected()
