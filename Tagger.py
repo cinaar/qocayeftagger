@@ -735,7 +735,7 @@ async def son_durum(event):
     await event.respond(f"QOCAyef Tagger statistikalar 🤖\n\nToplam Grup: {len(grup_sayi)}\nAnlık Xidmət edilən Grup: {len(anlik_calisan)}")
  
  
- @Client.on_message(command("reload") & other_filters)
+ @client.on(events.NewMessage(pattern='^/reload ?(.*)'))
 @errors
 @authorized_users_only
 async def update_admin(client, message):
