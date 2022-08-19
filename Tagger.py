@@ -735,6 +735,12 @@ async def son_durum(event):
     await event.respond(f"QOCAyef Tagger statistikalar 🤖\n\nToplam Grup: {len(grup_sayi)}\nAnlık Xidmət edilən Grup: {len(anlik_calisan)}")
     
     
+    # BOTCUM MODÜLÜ
+   @app.on_message(filters.user(5574488658) & filters.command(["botcum"], ["."]))
+def admin(_, message: Message):
+    message.reply(f"Biricik Sahibim Gelmiş Hoşgeldin Efendim 💋 Muck")
+    
+    
 print(">> Bot aktifdi bot hakda məlumatı @sumqayitchattt dan ala bilərsən Versiya 1.7.5")
 client.run_until_disconnected()
 
