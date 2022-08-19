@@ -726,15 +726,6 @@ async def info(event):
                    )
    
    
-   @client.on(events.NewMessage())
-async def mentionalladmin(event):
-  global grup_sayi
-  if event.is_group:
-    if event.chat_id in grup_sayi:
-      pass
-    else:
-      grup_sayi.append(event.chat_id)
-
 @client.on(events.NewMessage(pattern='^/botstatik ?(.*)'))
 async def son_durum(event):
     global anlik_calisan, grup_sayi, ozel_list
