@@ -733,22 +733,6 @@ async def son_durum(event):
     if sender.id not in ozel_list:
       return
     await event.respond(f"QOCAyef Tagger statistikalar 🤖\n\nToplam Grup: {len(grup_sayi)}\nAnlık Xidmət edilən Grup: {len(anlik_calisan)}")
- 
- 
- @client.on(events.NewMessage(pattern='^/reload ?(.*)'))
-@errors
-@authorized_users_only
-async def update_admin(client, message):
-    global admins
-    new_admins = []
-    new_ads = await client.get_chat_members(message.chat.id, filter="administrators")
-    for u in new_ads:
-        new_admins.append(u.user.id)
-    admins[message.chat.id] = new_admins
-    await client.send_message(
-        message.chat.id,
-        "✅ **Bot yeniden başladı!**\n✅ **Admin listesi güncellendi!**"
-    )
     
     
 print(">> Bot aktifdi bot hakda məlumatı @sumqayitchattt dan ala bilərsən Versiya 1.7.5")
