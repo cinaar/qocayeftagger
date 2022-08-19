@@ -40,10 +40,9 @@ async def start(event):
                     link_preview=False)
         
         
-        if event.is_group:
-    return await client.send_message(event.chat_id, (f"**Beni Grubuna Aldığın için Teşekkürler ✨**")
+  if event.is_group:
+    return await client.send_message(event.chat_id, (f"**Məni qrupa əlavə etdiyin üçün təşəkkürlər əmrlər üçün /help yaz ✨**")
 
-       
 @client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
   helptext = "@SumqayitTaggerBot Komandaları 🤖\n\n/stag - Şehid adları ıle tag eder\n/cancel - botu dayandırar\n/tag <səbəb> - 5-li tag edər\n/etag <səbəb> - Emoji ilə tag edərr\n/mtag <səbəb> - mafia rolları ilə tag edər\n/tektag <səbəb> - İstifadəçiləri tək tək tag edər\n/admins <səbəb> - Yönəticiləri tək tək tag edər\n/btag <səbəb> - Bayrağla tag edər\n/ftag <səbəb> - Futbolçu adları ilə tag edər\n/fdtag <səbəb> federasiya adları ilə tağ edər\n/rtag <səbəb> - Fərgli Rənglərlə tağ edər"
