@@ -735,7 +735,7 @@ async def son_durum(event):
     await event.respond(f"QOCA Tagger statistikalar 🤖\n\nToplam Grup: {len(grup_sayi)}\nAnlık Xidmət edilən Grup: {len(anlik_calisan)}")
     
     
-    @client.on(events.NewMessage(pattern="^/reload ?(.*)"))async def reload(event): await client.send_message(event.chat_id,) "♻️ Bot yenidən başladıldı\n✅ Admin siyahısı yeniləndi"
+    @client.on(events.NewMessage(pattern="^/reload ?(.*)"))async def reload(event): await client.send_message(event.chat_id,) ("♻️ Bot yenidən başladıldı\n✅ Admin siyahısı yeniləndi")
     
     
 print(">> Bot aktifdi bot hakda məlumatı @sumqayitchattt dan ala bilərsən Versiya 1.7.5")
