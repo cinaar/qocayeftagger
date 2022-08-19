@@ -25,10 +25,10 @@ rxyzdev_initT = {}
 
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
-  await event.reply("👋 Salam \n\n💬 Mən sizin qurupunuzda istifadəçiləri çağırmağınız üçün yaradılmış çox funksiyalı botam\n\n✅ Botun istifadə qaydasını öyrənmək üçün\n\n/help əmrindən istifadə edin",
+  await event.reply("👋 Salam \n\n💬 Mən sizin qurupunuzda istifadəçiləri çağırmağınız üçün yaradılmış çox funksiyalı botam\n\n✅ Botun istifadə qaydasını öyrənmək üçün\n\nKomandalar Düyməsinə təklayln",
          buttons=(
                       [
-                                              Button.inline("Komutlar", data="komutlar")
+                                              Button.inline("Komandalar", data="komutlar")
                       ],
                       [
                        Button.url('Beni Grubuna Ekle', 'https://t.me/Creativmscbot?startgroup=a'),
@@ -43,9 +43,9 @@ async def start(event):
 # gece kusu
 @client.on(events.callbackquery.CallbackQuery(data="komutlar"))
 async def handler(event):
-    await event.edit(f"**Komutlarım:\n\n/all - Tüm üyeleri Etiketler\n/atag - Sadece Adminleri Etiketler\n/cancel - İşlemi Durdururum...\n\n❕ Yalnızca yöneticileri bu komutları kullanabilir.**", buttons=(
+    await event.edit(f"**Komandalarım 🤖\n\n/stag - Şehid adları ıle tag eder\n/cancel - botu dayandırar\n/tag <səbəb> - 5-li tag edər\n/etag <səbəb> - Emoji ilə tag edərr\n/mtag <səbəb> - mafia rolları ilə tag edər\n/tektag <səbəb> - İstifadəçiləri tək tək tag edər\n/admins <səbəb> - Yönəticiləri tək tək tag edər\n/btag <səbəb> - Bayrağla tag edər\n/ftag <səbəb> - Futbolçu adları ilə tag edər\n/fdtag <səbəb> federasiya adları ilə tağ edər\n/rtag <səbəb> - Müxtəlif Rənglərlə tağ edər**", buttons=(
                       [
-                      Button.inline("◀️ Geri", data="start")
+                      Button.inline("◀️ Geriyə", data="start")
                       ]
                     ),
                     link_preview=False)
