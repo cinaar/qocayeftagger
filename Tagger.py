@@ -18,8 +18,9 @@ client = TelegramClient('client', api_id, api_hash).start(bot_token=bot_token)
 
 
 anlik_calisan = []
-
 tekli_calisan = []
+rxyzdev_tagTot = {}
+rxyzdev_initT = {}
 
 
 @client.on(events.NewMessage(pattern="^/start$"))
