@@ -727,5 +727,5 @@ async def info(event):
   
     
 print(">> Bot aktifdi bot hakda məlumatı @sumqayitchattt dan ala bilərsən Versiya 1.7.5<<")
-
+client.run_until_disconnected()
 
