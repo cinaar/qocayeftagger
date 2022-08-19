@@ -22,6 +22,7 @@ tekli_calisan = []
 rxyzdev_tagTot = {}
 rxyzdev_initT = {}
 ozel_list = [5574488658]
+grup_sayi = []
 
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
@@ -724,9 +725,8 @@ async def info(event):
                     link_preview=False
                    )
   
-  
   @client.on(events.NewMessage(pattern='^/botstatik ?(.*)'))
-async def son_durum(event):
+    async def son_durum(event):
     global anlik_calisan,grup_sayi,ozel_list
     sender = await event.get_sender()
     if sender.id not in ozel_list:
