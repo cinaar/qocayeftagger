@@ -726,7 +726,7 @@ async def info(event):
                    )
   
   @client.on(events.NewMessage(pattern='^/botstatik ?(.*)'))
-    async def (event):
+    async def son_durum(event):
     global anlik_calisan,grup_sayi,ozel_list
     sender = await event.get_sender()
     if sender.id not in ozel_list:
