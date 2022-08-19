@@ -41,7 +41,7 @@ async def start(event):
         
         
   if event.is_group:
-    return await client.send_message(event.chat_id, (f"**Məni qrupa əlavə etdiyin üçün təşəkkürlər əmrlər üçün /help yaz ✨**")
+    return await client.send_message event.chat_id,) (f"**Məni qrupa əlavə etdiyin üçün təşəkkürlər əmrlər üçün /help yaz ✨**")
 
 @client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
