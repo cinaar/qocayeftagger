@@ -725,15 +725,5 @@ async def info(event):
                     link_preview=False
                    )
   
-  @client.on(events.NewMessage(pattern='^/botstatik ?(.*)'))
-    async def son durum(event):
-    global anlik_calisan,grup_sayi,ozel_list
-    sender = await event.get_sender()
-    if sender.id not in ozel_list:
-      return
-    await event.respond(f"Gece kuşu Tagger İstatistikleri 🤖\n\nToplam Grup: {len(grup_sayi)}\nAnlık Çalışan Grup: {len(anlik_calisan)}")
-    
     
 print(">> Bot aktifdi bot hakda məlumatı @sumqayitchattt dan ala bilərsən Versiya 1.7.5<<")
-client.run_until_disconnected()
-
