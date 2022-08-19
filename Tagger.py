@@ -28,7 +28,7 @@ async def start(event):
   await event.reply("👋 Salam \n\n💬 Mən sizin qurupunuzda istifadəçiləri çağırmağınız üçün yaradılmış çox funksiyalı botam\n\n✅ Botun istifadə qaydasını öyrənmək üçün\n\n/help əmrindən istifadə edin",
          buttons=(
                       [
-                       Button.url('Sahibim', 'https://t.me/Rexxuxxnxx')
+                                              Button.inline("Komutlar", data="komutlar")
                       ],
                       [
                        Button.url('Beni Grubuna Ekle', 'https://t.me/Creativmscbot?startgroup=a'),
@@ -39,7 +39,16 @@ async def start(event):
                       ],
                     ),
                     link_preview=False)
-        
+     
+# gece kusu
+@client.on(events.callbackquery.CallbackQuery(data="komutlar"))
+async def handler(event):
+    await event.edit(f"**Komutlarım:\n\n/all - Tüm üyeleri Etiketler\n/atag - Sadece Adminleri Etiketler\n/cancel - İşlemi Durdururum...\n\n❕ Yalnızca yöneticileri bu komutları kullanabilir.**", buttons=(
+                      [
+                      Button.inline("◀️ Geri", data="start")
+                      ]
+                    ),
+                    link_preview=False)
         
   if event.is_group:
     return await client.send_message (event.chat_id,) (f"**Məni qrupa əlavə etdiyin üçün təşəkkürlər əmrlər üçün /help yaz ✨**")
