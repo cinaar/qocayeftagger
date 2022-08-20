@@ -55,7 +55,7 @@ async def handler(event):
 async def handler(event):
     async for usr in client.iter_participants(event.chat_id):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
-     await event.edit(f"️ Salam \n\n💬 Mən sizin qurupunuzda istifadəçiləri çağırmağınız üçün yaradılmış çox modullu tağ botuyam\n\n✅ Botun istifadə qaydasını öyrənmək üçün\n\nKomandalar Düyməsinə tıklayın", buttons=( 
+     await event.edit(f" ⚡️ Salam \n\n💬 Mən sizin qurupunuzda istifadəçiləri çağırmağınız üçün yaradılmış çox modullu tağ botuyam\n\n✅ Botun istifadə qaydasını öyrənmək üçün\n\nKomandalar Düyməsinə tıklayın", buttons=( 
                       [
                                               Button.inline("✍ ᴇᴍʀʟᴇʀ", data="help")
                       ],
