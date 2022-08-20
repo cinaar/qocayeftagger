@@ -591,7 +591,7 @@ async def mentionall(event):
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
-      usrtxt += f"👥 - [{usr.first_name}](tg://user?id={usr.id}) \n"
+      usrtxt += f"⚡️ - [{usr.first_name}](tg://user?id={usr.id}) \n"
       if event.chat_id not in anlik_calisan:
         await event.respond("Tag prosesi uğurla dayandırıldı ✅\n\n**Buda sizin reklamınız ola bilər  @Rexxuxxnxx**✅")
         return
@@ -609,7 +609,7 @@ async def mentionall(event):
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
-      usrtxt += f"👥 - [{usr.first_name}](tg://user?id={usr.id}) \n"
+      usrtxt += f"⚡️ - [{usr.first_name}](tg://user?id={usr.id}) \n"
       if event.chat_id not in anlik_calisan:
         await event.respond("Tag prosesi uğurla dayandırıldı ✅\n\n**Buda sizin reklamınız ola bilər  @Rexxuxxnxx**✅")
         return
@@ -626,9 +626,9 @@ async def cancel(event):
   
 @client.on(events.NewMessage(pattern="^/tektag ?(.*)"))
 async def mentionall(event):
-  global tekli_calisan
+  global anlik_calisan
   if event.is_private:
-    return await event.respond("**Bu buton qurup və kanallar üçün keçərlidi ❗️**")
+    return await event.respond("Bu buton qurup və kanallar üçün keçərlidi ❗**")
   
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
@@ -643,51 +643,45 @@ async def mentionall(event):
     mode = "text_on_reply"
     msg = event.reply_to_msg_id
     if msg == None:
-        return await event.respond("**Keçmiş mesajlar üçün tag edə bilmərəm*")
+        return await event.respond("Keçmiş mesajlar üçün tag edə bilmərəm")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
     return await event.respond("İstifadəçiləri çağırmağım üçün bir səbəb yoxdur ❗️")
   else:
-    return await event.respond("**İstifadəçiləri çağırmağım üçün bir səbəb yazın...!**")
+    return await event.respond("İstifadəçiləri çağırmağım üçün bir səbəb yazın...!")
   
   if mode == "text_on_cmd":
-    tekli_calisan.append(event.chat_id)
+    anlik_calisan.append(event.chat_id)
     usrnum = 0
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
-      usrtxt += f"**👤 - [{usr.first_name}](tg://user?id={usr.id}) \n**"
-      if event.chat_id not in tekli_calisan:
-        await event.respond("**Tag prosesi uğurla dayandırıldı ✅\n\n**Buda sizin reklamınız ola bilər  @@Rexxuxxnxx ✅**")
+      usrtxt += f"➤ - [{usr.first_name}](tg://user?id={usr.id}) \n"
+      if event.chat_id not in anlik_calisan:
+        await event.respond("Tag prosesi uğurla dayandırıldı ✅\n\n**Buda sizin reklamınız ola bilər  @Rexxuxxnxx**✅")
         return
       if usrnum == 1:
-        await client.send_message(event.chat_id, f"{usrtxt} {msg}")
+        await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
         
   
   if mode == "text_on_reply":
-    tekli_calisan.append(event.chat_id)
+    anlik_calisan.append(event.chat_id)
  
     usrnum = 0
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
-      usrtxt += f"👤 - [{usr.first_name}](tg://user?id={usr.id}) \n"
-      if event.chat_id not in tekli_calisan:
-        await event.respond("Tag prosesi uğurla dayandırıldı ✅\n\n**Buda sizin reklamınız ola bilər  @Rexxuxxnxx ✅**")
+      usrtxt += f"➤ - [{usr.first_name}](tg://user?id={usr.id}) \n"
+      if event.chat_id not in anlik_calisan:
+        await event.respond("Tag prosesi uğurla dayandırıldı ✅\n\n**Buda sizin reklamınız ola bilər  @Rexxuxxnxx**✅")
         return
       if usrnum == 1:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
         await asyncio.sleep(2)
         usrnum = 0
-        usrtxt = ""
-
-@client.on(events.NewMessage(pattern='^(?i)/cancel'))
-async def cancel(event):
-  global tekli_calisan
-  tekli_calisan.remove(event.chat_id)
-	
+        usrtxt = ""  
 
 
 @client.on(events.NewMessage(pattern="^/admins ?(.*)"))
