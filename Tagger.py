@@ -57,7 +57,7 @@ async def help(event):
   await event.reply(helptext,
                     buttons=(
                       [
-                       Button.url('Sahibim', 'https://t.me/Rexxuxxnxx')
+                       Button.inline("◀️ Geri", data="start")
                       ],
                       [
                        Button.url('Beni Grubuna Ekle', 'https://t.me/Creativmscbot?startgroup=a'),
