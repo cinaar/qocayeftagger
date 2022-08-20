@@ -46,12 +46,11 @@ async def start(event):
 async def handler(event):
     await event.edit(f"**Komandalarım 🤖\n\n/stag - Şehid adları ıle tag eder\n/cancel - botu dayandırar\n/tag <səbəb> - 5-li tag edər\n/etag <səbəb> - Emoji ilə tag edərr\n/mtag <səbəb> - mafia rolları ilə tag edər\n/tektag <səbəb> - İstifadəçiləri tək tək tag edər\n/admins <səbəb> - Yönəticiləri tək tək tag edər\n/btag <səbəb> - Bayrağla tag edər\n/ftag <səbəb> - Futbolçu adları ilə tag edər\n/fdtag <səbəb> federasiya adları ilə tağ edər\n/rtag <səbəb> - Müxtəlif Rənglərlə tağ edər**", buttons=(
                       [
-                      Button.inline("◀️ Geriyə", data="start")
+                      Button.inline("◀️ Geri", data="start")
                       ]
                     ),
                     link_preview=False)
         
-
 @client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
   helptext = "@SumqayitTaggerBot Komandaları 🤖\n\n/stag - Şehid adları ıle tag eder\n/cancel - botu dayandırar\n/tag <səbəb> - 5-li tag edər\n/etag <səbəb> - Emoji ilə tag edərr\n/mtag <səbəb> - mafia rolları ilə tag edər\n/tektag <səbəb> - İstifadəçiləri tək tək tag edər\n/admins <səbəb> - Yönəticiləri tək tək tag edər\n/btag <səbəb> - Bayrağla tag edər\n/ftag <səbəb> - Futbolçu adları ilə tag edər\n/fdtag <səbəb> federasiya adları ilə tağ edər\n/rtag <səbəb> - Fərgli Rənglərlə tağ edər"
