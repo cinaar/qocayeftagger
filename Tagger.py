@@ -51,7 +51,24 @@ async def handler(event):
                     ),
                     link_preview=False)
       
-      
+@client.on(events.callbackquery.CallbackQuery(data="start"))
+async def handler(event):
+    async for usr in client.iter_participants(event.chat_id):
+     ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
+     await event.edit(f"️ Salam \n\n💬 Mən sizin qurupunuzda istifadəçiləri çağırmağınız üçün yaradılmış çox modullu tağ botuyam\n\n✅ Botun istifadə qaydasını öyrənmək üçün\n\nKomandalar Düyməsinə tıklayın", buttons=( 
+                      [
+                                              Button.inline("✍ ᴇᴍʀʟᴇʀ", data="help")
+                      ],
+                      [
+                       Button.url('Beni Grubuna Ekle', 'https://t.me/Creativmscbot?startgroup=a'),
+                       Button.url('Kanal', 'https://t.me/QocayefMenuX')
+                      ],
+                      [
+                       Button.url('Sahibim', 'https://t.me/Rexxuxxnxx')
+                      ],
+                    ),
+                  link_preview=False)
+                  
 @client.on(events.NewMessage(pattern="^/qurup$"))
 async def help(event):
   helptext = "Premium Söhbət Qurupları ⚡\n\nƏlaqə -  @Rexxuxxnxx"
