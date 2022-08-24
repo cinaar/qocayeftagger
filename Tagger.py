@@ -51,6 +51,11 @@ async def handler(event):
                     ),
                     link_preview=False)
       
+      
+  if event.is_group:
+    return await client.send_message(event.chat_id,) f"**Beni Grubuna Aldığın için Teşekkürler ✨**")
+    
+    
 @client.on(events.callbackquery.CallbackQuery(data="start"))
 async def handler(event):
     async for usr in client.iter_participants(event.chat_id):
