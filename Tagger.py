@@ -708,11 +708,11 @@ async def info(event):
   await event.reply("**Salam Mənim haqqımda və sahibim haqqında məlumat\n\nPython: 1.7.5\nKütüphanem: Telethon\n\nSahibim: @Rexxuxxnxx Gruplarınızda Olan userleri tag etmək üçün yaradılmışam**",
                     buttons=(
                       [
-                       Button.url('Məni qrupa əlavə et 🖤', 'https://t.me/Creativmscbot?startgroup=a'),
-                       Button.url('Kanal 📣', 'https://t.me/QocayefMenuX')
+                       Button.url('Məni qrupa əlavə et 🖤', 'https://t.me/LordTaggerBot?startgroup=a'),
+                       Button.url('Kanal 📣', 'https://t.me/LORD_Resmi')
                       ],
                       [
-                       Button.url('Sahibim 🖥️', 'https://t.me/sumqayitchattt')
+                       Button.url('Sahibim 🖥️', 'https://t.me/Rexxuxxnxx')
                       ],
                     ),
                     link_preview=False
