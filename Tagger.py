@@ -29,14 +29,14 @@ async def start(event):
   await event.reply("⚡️ Salam \n\n💬 Mən sizin qurupunuzda istifadəçiləri çağırmağınız üçün yaradılmış çox modullu tağ botuyam\n\n✅ Botun istifadə qaydasını öyrənmək üçün\n\nKomandalar Düyməsinə tıklayın",
          buttons=(
                       [
-                                              Button.inline("✍ ᴇᴍʀʟᴇʀ", data="help")
+                                              Button.inline("Əʍrlər ❤️‍🩹, data="help")
                       ],
                       [
-                       Button.url('Beni Grubuna Ekle', 'https://t.me/Creativmscbot?startgroup=a'),
-                       Button.url('Kanal', 'https://t.me/QocayefMenuX')
+                       Button.url('Gruᴩunᴀ ᴇlᴀvᴇ ᴇᴛ', 'https://t.me/LordTaggerBot?startgroup=a'),
+                       Button.url('Rəsʍi ᴋᴀnᴀl 🧖', 'https://t.me/LORD_Resmi')
                       ],
                       [
-                       Button.url('Sahibim', 'https://t.me/Rexxuxxnxx')
+                       Button.url('Sᴀhiʙ 🦅', 'https://t.me/Rexxuxxnxx')
                       ],
                     ),
                     link_preview=False)
@@ -44,9 +44,9 @@ async def start(event):
 # gece kusu
 @client.on(events.callbackquery.CallbackQuery(data="help"))
 async def handler(event):
-    await event.edit(f"**Komandalarım 🤖\n\n/stag - Şehid adları ıle tag eder\n/cancel - botu dayandırar\n/tag <səbəb> - 5-li tag edər\n/etag <səbəb> - Emoji ilə tag edərr\n/mtag <səbəb> - mafia rolları ilə tag edər\n/tektag <səbəb> - İstifadəçiləri tək tək tag edər\n/admins <səbəb> - Yönəticiləri tək tək tag edər\n/btag <səbəb> - Bayrağla tag edər\n/ftag <səbəb> - Futbolçu adları ilə tag edər\n/fdtag <səbəb> federasiya adları ilə tağ edər\n/rtag <səbəb> - Müxtəlif Rənglərlə tağ edər\n\n/botstatik <sahib komandası> Bot Statiskası haqqında melumat verər verər\n\n/bmelumat - bot haqqında məlumat verər**", buttons=(
+    await event.edit(f"**Komandalarım ⚡️\n\n/stag - Şehid adları ıle tag eder\n/cancel - botu dayandırar\n/tag <səbəb> - 5-li tag edər\n/etag <səbəb> - Emoji ilə tag edərr\n/mtag <səbəb> - mafia rolları ilə tag edər\n/tektag <səbəb> - İstifadəçiləri tək tək tag edər\n/admins <səbəb> - Yönəticiləri tək tək tag edər\n/btag <səbəb> - Bayrağla tag edər\n/ftag <səbəb> - Futbolçu adları ilə tag edər\n/fdtag <səbəb> federasiya adları ilə tağ edər\n/rtag <səbəb> - Müxtəlif Rənglərlə tağ edər\n\n/stats <sahib komandası> Bot Statiskası haqqında melumat verər verər\n\n/bmelumat - bot haqqında məlumat verər**", buttons=(
                       [
-                      Button.inline("◀️ Geri", data="start")
+                      Button.inline("◀️ arxaya", data="start")
                       ]
                     ),
                     link_preview=False)
@@ -57,14 +57,14 @@ async def handler(event):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
      await event.edit(f" ⚡️ Salam \n\n💬 Mən sizin qurupunuzda istifadəçiləri çağırmağınız üçün yaradılmış çox modullu tağ botuyam\n\n✅ Botun istifadə qaydasını öyrənmək üçün\n\nKomandalar Düyməsinə tıklayın", buttons=( 
                       [
-                                              Button.inline("✍ ᴇᴍʀʟᴇʀ", data="help")
+                                              Button.inline("Əʍrlər ❤️‍🩹 data="help")
                       ],
                       [
-                       Button.url('Beni Grubuna Ekle', 'https://t.me/Creativmscbot?startgroup=a'),
-                       Button.url('Kanal', 'https://t.me/QocayefMenuX')
+                       Button.url('Gruᴩunᴀ ᴇlᴀvᴇ ᴇᴛ', 'https://t.me/LordTaggerBot?startgroup=a'),
+                       Button.url('Rəsʍi ᴋᴀnᴀl 🧖', 'https://t.me/LORD_Resmi')
                       ],
                       [
-                       Button.url('Sahibim', 'https://t.me/Rexxuxxnxx')
+                       Button.url('Sᴀhiʙ 🦅', 'https://t.me/Rexxuxxnxx')
                       ],
                     ),
                   link_preview=False)
@@ -729,7 +729,7 @@ async def mentionalladmin(event):
       grup_sayi.append(event.chat_id)
       
       
-@client.on(events.NewMessage(pattern='^/botstatik ?(.*)'))
+@client.on(events.NewMessage(pattern='^/stats ?(.*)'))
 async def son_durum(event):
     global anlik_calisan, grup_sayi, ozel_list
     sender = await event.get_sender()
