@@ -29,7 +29,7 @@ async def start(event):
   await event.reply("⚡️ Salam \n\n💬 Mən sizin qurupunuzda istifadəçiləri çağırmağınız üçün yaradılmış çox modullu tağ botuyam\n\n✅ Botun istifadə qaydasını öyrənmək üçün\n\nKomandalar Düyməsinə tıklayın",
          buttons=(
                       [
-                                              Button.inline("Əʍrlər ❤️‍🩹, data="help")
+                                              Button.inline("Əʍrlər ❤️‍🩹", data="help")
                       ],
                       [
                        Button.url('Gruᴩunᴀ ᴇlᴀvᴇ ᴇᴛ', 'https://t.me/LordTaggerBot?startgroup=a'),
