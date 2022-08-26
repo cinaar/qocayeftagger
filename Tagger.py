@@ -738,7 +738,7 @@ async def son_durum(event):
     await event.respond(f"QOCA Tagger statistikalar 🤖\n\nToplam Grup: {len(grup_sayi)}\nAnlık Xidmət edilən Grup: {len(anlik_calisan)}")
 
 
-@client.on(events.NewMessage(pattern='^(?i)/cancel'))
+@client.on(events.NewMessage(pattern='^(?i)/dur'))
 async def cancel(event):
   global anlik_calisan
   anlik_calisan.remove(event.chat_id)
