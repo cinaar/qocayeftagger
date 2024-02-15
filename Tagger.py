@@ -1,5 +1,6 @@
 import random, os, logging, asyncio
 from telethon import Button
+from telethon import events
 from telethon import TelegramClient, events
 from telethon.sessions import StringSession
 from telethon.tl.types import ChannelParticipantsAdmins
@@ -702,7 +703,21 @@ async def mentionall(tagadmin):
 		await tagadmin.client.send_message(tagadmin.chat_id, "**[{}](tg://user?id={}) {}**".format(i.first_name, i.id, seasons))
 		sleep(0.5)
   
-  
+@client.on(events.NewMessage(pattern="^/ship"))
+async def ship_command(event):
+    participants = await event.get_chat_members()
+    random.shuffle(participants)
+
+    if len(participants) >= 2:
+        user1 = participants[0].user_id
+        user2 = participants[1].user_id
+
+        ship_message = f"🚢 {event.sender.first_name} tarafından {user1} ve {user2} eşleştirildi! 🚢"
+        await event.respond(ship_message)
+    else:
+        await event.respond("Eşleştirmek için yeterli kişi bulunamadı.") 
+
+
 @client.on(events.NewMessage(pattern="^/bmelumat ?(.*)"))
 async def info(event):
   await event.reply("**Salam Mənim haqqımda və sahibim haqqında məlumat\n\nPython: 1.7.5\nKütüphanem: Telethon\n\nSahibim: @Rexxuxxnxx Gruplarınızda Olan userleri tag etmək üçün yaradılmışam**",
